@@ -19,6 +19,12 @@ export function Header() {
 
         <div className="hidden md:flex md:items-center md:gap-8">
           <Link
+            href="/blog"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
+          <Link
             href="#services"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -57,6 +63,13 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="flex flex-col gap-4 px-6 py-4">
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
+            </Link>
             <Link
               href="#services"
               className="text-sm font-medium text-muted-foreground hover:text-foreground"
